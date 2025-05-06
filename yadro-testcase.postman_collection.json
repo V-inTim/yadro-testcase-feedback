@@ -1,0 +1,58 @@
+{
+	"info": {
+		"_postman_id": "786fe855-6c12-4d6d-8f30-5969d73729ad",
+		"name": "yadro-testcase",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37753324"
+	},
+	"item": [
+		{
+			"name": "get feedback types",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "post feedback",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "feedback_type",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "text",
+							"value": "sadfsd",
+							"type": "text"
+						},
+						{
+							"key": "file",
+							"type": "file",
+							"src": []
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/feedback/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"feedback",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
