@@ -45,6 +45,7 @@ python manage.py runserver
 GET http://localhost:8000/feedback/types/ 
 **Ответ:**
 ```json
+// 200
 [
     {
         "id": "4",
@@ -63,11 +64,12 @@ POST http://localhost:8000/feedback/
 }
 ```
 **Ответ:**
-статусы 201 или 400
-```
+`статусы 201 или 400`
+Коллекции postman в файле yadro-testcase.postman_collection.json
 ## Дополнительно 
 - Код написан с flake8 (конфигурация прописана в setup.cfg)
 - Модели поключены к админке
 - Из условий сделал вывод, что необходима только клиентская часть, поэтому добавление данных типов обратной связи только через админку или бд
 - Переменные перенесены в .env из соображений безопасности
 - Добавлен workflow git actions для запуска тестов и проверки code style по flake8
+- Коллекции postman в файле yadro-testcase.postman_collection.json
