@@ -43,12 +43,18 @@ jobs:
     - name: Run migrations
       env: 
         DATABASE_URL: postgres://tick_user:tick_password@localhost:5432/tick_db
+        DEBUG=True
+        SECRET_KEY=key
+        ALLOWED_HOSTS=localhost,127.0.0.1
       run: |
         python manage.py migrate
 
     - name: Run tests
       env: 
         DATABASE_URL: postgres://tick_user:tick_password@localhost:5432/tick_db
+        DEBUG=True
+        SECRET_KEY=key
+        ALLOWED_HOSTS=localhost,127.0.0.1
       run: |
         python manage.py test
     
